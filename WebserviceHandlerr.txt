@@ -1,0 +1,16 @@
+
+ Webservice Handler Utility Package:
+ 
+ Commfunctions.java :-- 1. This class helps in establishing connection between Server and Application. This function support two types 
+						   of entities i.e UrlEncodedFormEntity and  MultipartEntity for sending File on server. 
+						2. Also It converts the response from server to Jsonformat
+ MainAsyncTask.java :-- 1. This class extends AsynTask that run simultaneouly with another task in background without effecting current task
+						2. It simply fetches data from Client and send Url, Key Parametrs to server using method "connectionEstablished" in commonfunctions.java
+							and get back response from server to client.
+ MainAsynListener.java :-- 1. It is an Interface that any activity can implement in order to use this Utility Package
+						   2. Its contains two methods 
+						       1. onPostSuccess -- Its contains result in String format for particular Webservice
+							   2. onPostError -- Its returns failure response if server repond false response
+							   
+  Advantage of this package: 
+ 1. Reusability : It prevent user from implementing AsyncTask for Particular Server Response  
